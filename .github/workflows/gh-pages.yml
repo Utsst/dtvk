@@ -1,0 +1,36 @@
+name: Deploy Sphinx docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # or 'master' if that’s your default branch
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Check out code
+      uses: actions/checkout@v3
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: 📦 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install sphinx pydata-sphinx-theme myst-parser sphinx.ext.githubpages
+
+    - name: 🏗 Build documentation
+      run: |
+        sphinx-build -b html source build/html
+
+    - name: 🚀 Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./build/html
+        force_orphan: true
