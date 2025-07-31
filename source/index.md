@@ -11,6 +11,8 @@ This manual aims to help users quickly get started with the kit. It provides ins
 - [Disclaimer](disclaimer.md)
 - [Attachments](attachments.md)
 
+![Alt text](images/dtvk_doc_01.png)
+
 ## Overview
 
 The DTV Kit features a fully autonomous driving vehicle, designed for developers, universities, and research institutions. It serves as a comprehensive teaching kit, dedicated to cultivating talent in the autonomous driving field and supporting the global academic and research communities. The platform accommodates both closed-loop autonomous driving scenarios and modular secondary development, delivering a highly adaptable solution for educational and research purposes.
