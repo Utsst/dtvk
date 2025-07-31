@@ -72,8 +72,8 @@ html_theme_options = {
     },
 }
 
-html_last_updated = True
 html_last_updated_fmt = "%Y-%m-%d"
+html_last_updated = True
 
 # html_logo = "_static/logo-light.png"
 # html_favicon = "_static/favicon.ico"
