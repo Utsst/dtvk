@@ -2,7 +2,7 @@
 
 # What's inside
 
-This manual aims to help users quickly get started with the kit. It provides instructions on operating and controlling the vehicle, and outlines usage guidelines and safety precautions to ensure proper operation and to extend the platform's service life.
+This manual aims to help users quickly get started with the DTV Kit. It provides instructions on operating and controlling the vehicle, and outlines usage guidelines and safety precautions to ensure proper operation and to extend the platform's service life.
 
 ## Contents
 
