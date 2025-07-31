@@ -79,8 +79,11 @@ today_fmt = "%Y-%m-%d"
 # html_logo = "_static/logo-light.png"
 # html_favicon = "_static/favicon.ico"
 
+import datetime
+
 html_context = {
     "default_mode": "light",
+    "last_updated": datetime.datetime.now().strftime("%Y-%m-%d"),  # 👈 force inject manually
 }
 
 html_show_sphinx = False  # Remove "Built with Sphinx"
