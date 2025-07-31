@@ -16,7 +16,7 @@ html_title = "DTVK documentation"
 extensions = [
     "myst_parser",
     "sphinx.ext.githubpages",
-    "sphinx_last_updated_by_git",
+    "sphinx_last_updated_by_git",  # ✅ must be exactly this name
 ]
 
 source_suffix = {
@@ -91,3 +91,7 @@ html_show_sourcelink = False # Remove source
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 
+myst_enable_extensions = [
+    "colon_fence",
+    "jinja",  # ✅ This enables {{ last_updated }} to be rendered in .md
+]
