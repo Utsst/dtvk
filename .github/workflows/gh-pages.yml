@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: 📥 Check out code
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0  # 👈 Needed to get full Git history for last updated timestamps
 
     - name: 🐍 Set up Python
       uses: actions/setup-python@v4

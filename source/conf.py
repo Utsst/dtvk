@@ -15,7 +15,8 @@ html_title = "DTVK documentation"
 
 extensions = [
     "myst_parser",
-    "sphinx.ext.githubpages"
+    "sphinx.ext.githubpages",
+    "sphinx.ext.last_updated" 
 ]
 
 source_suffix = {
@@ -69,6 +70,16 @@ html_theme_options = {
         "icon": "material/toggle-switch",  # Icon for the toggle button
         "label": "Switch theme",           # Tooltip or button label
     },
+}
+
+html_sidebars = {
+    "**": [
+        "sidebar-nav-bs.html",       # The main navigation tree
+        "custom-last-updated.html",  # Our custom template for the last updated date
+        # You can add other pydata_sphinx_theme sidebar components here if you want them,
+        # e.g., "sidebar-search-bs.html" if you want the persistent search bar,
+        # "sidebar-ethical-ads.html", etc.
+    ]
 }
 
 html_last_updated = True
