@@ -1,4 +1,43 @@
+/* custom.css */
+
 :root {
+    /* Base Colors */
   --pst-color-primary: #3498db;
   --pst-color-secondary: #2ecc71;
+
+  /* Text Colors */
+  --pst-color-text-primary: #343a40; /* Darker text for readability */
+  --pst-color-text-secondary: #6c757d; /* Lighter gray for less important text */
+
+  /* Background Colors */
+  --pst-color-background-primary: #ffffff; /* White background for main content */
+  --pst-color-background-secondary: #f8f9fa; /* Light gray for sidebars/blocks */
+
+  /* Link Colors */
+  --pst-color-link: #007bff; /* Standard link color */
+  --pst-color-link-hover: #0056b3; /* Darker blue on hover for links */
+
+  /* Sidebar Navigation Colors (Left Sidebar) */
+  --pst-color-sidebar-background: var(--pst-color-background-secondary); /* Use secondary background */
+  --pst-color-sidebar-link: var(--pst-color-text-primary); /* Sidebar link text */
+  --pst-color-sidebar-link-hover: var(--pst-color-link-hover); /* Hover color for sidebar links */
+  --pst-color-sidebar-link-active: var(--pst-color-primary); /* Active link in sidebar */
+  --pst-color-sidebar-border: #dee2e6; /* Border color within sidebar */
+
+  /* Table Colors */
+  --pst-color-table-border: #e9ecef; /* General table border color */
+  --pst-color-table-header-background: #e9ecef; /* Header background */
+  --pst-color-table-header-text: var(--pst-color-text-primary); /* Header text color */
+  --pst-color-table-header-border-bottom: var(--pst-color-primary); /* Separating rule below header */
+
+  /* Previous/Next Navigation Links (Footer Nav) */
+  --pst-color-prev-next-link: var(--pst-color-link);
+  --pst-color-prev-next-link-hover: var(--pst-color-link-hover);
+  --pst-color-prev-next-background-hover: var(--pst-color-background-secondary); /* Background on hover */
+
+  /* Admonition (Note, Tip, Warning) Colors - examples */
+  --pst-color-admonition-note: #cce5ff;
+  --pst-color-admonition-tip: #d4edda;
+  --pst-color-admonition-warning: #fff3cd;
+  --pst-color-admonition-error: #f8d7da;
 }

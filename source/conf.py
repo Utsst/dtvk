@@ -33,18 +33,13 @@ exclude_patterns = []
 html_theme = 'pydata_sphinx_theme'
 
 html_theme_options = {
-    # Items displayed at the start (left) of the navbar — usually the logo
+    # Items displayed in the top navigation bar
     "navbar_start": ["navbar-logo"],
-
-    # Items centered in the navbar — typically the main navigation links
-    # "navbar_center": ["navbar-nav"],
-
-    # Items displayed at the end (right) of the navbar — here: theme toggle, icon links, and search button
-    # "navbar_end": ["theme-switcher", "navbar-icon-links", "search-button"],
-    "navbar_end": ["theme-switcher"],
+    "navbar_center": ["my_custom_navbar_content"],
+    "navbar_end": [],
 
     # Placeholder text shown in the floating search dialog
-    "search_bar_text": "Search the docs ...",
+    "search_bar_text": "Search the documentation ...",
 
     # Content shown at the start (left) of the footer — here, custom footer content
     "footer_start": ["footer"],
@@ -66,11 +61,13 @@ html_theme_options = {
     # "dark_logo": "logo-dark.png",
 
     # Controls the appearance and label of the theme toggle (light/dark/system)
-    "theme_toggle": {
-        "icon": "material/toggle-switch",  # Icon for the toggle button
-        "label": "Switch theme",           # Tooltip or button label
-    },
+    # "theme_toggle": {
+    #     "icon": "material/toggle-switch",  # Icon for the toggle button
+    #     "label": "Switch theme",           # Tooltip or button label
+    # },
 }
+
+html_favicon = "_static/favicon.ico"
 
 html_last_updated_fmt = "%Y-%m-%d"
 html_last_updated = True
@@ -92,3 +89,8 @@ html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 
 html_extra_path = ['_static/robots.txt']
+
+# To remove the left sidebar (Primary Sidebar) from all pages
+html_sidebars = {
+    "**": [], # An empty list means no sidebar items for all pages
+}
