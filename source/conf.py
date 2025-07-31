@@ -32,6 +32,8 @@ exclude_patterns = []
 
 html_theme = 'pydata_sphinx_theme'
 
+html_last_updated_fmt = "%Y-%m-%d"  # or use another format string 
+
 html_theme_options = {
     # Items displayed at the start (left) of the navbar — usually the logo
     "navbar_start": ["navbar-logo"],
