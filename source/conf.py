@@ -38,7 +38,7 @@ html_theme_options = {
     "navbar_end": ["theme-switcher", "navbar-icon-links"],
     "footer_start": ["footer"],
     "footer_end": ["copyright"],
-    "show_prev_next": False,
+    "show_prev_next": True,
 
     "use_edit_page_button": False,
     "navigation_with_keys": True,
