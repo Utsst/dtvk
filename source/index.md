@@ -1,24 +1,25 @@
 # DTVK documentation
 
-```{toctree}
-:maxdepth: 2
-:caption: Contents
+Welcome to the DTVK documentation.
 
-product-unboxing-guide
-hardware-and-management
-autonomous-driving-software
-safety-operation-and-maintenance
-disclaimer
-attachments
+This guide walks you through everything from unboxing and setup to operation and safety.
 
-## Introduction
+## Contents
 
-Welcome to the official documentation for DTVK.
+- [Product Unboxing Guide](product-unboxing-guide.md)
+- [Hardware and Management](hardware-and-management.md)
+- [Autonomous Driving Software](autonomous-driving-software.md)
+- [Safety Operation and Maintenance](safety-operation-and-maintenance.md)
+- [Disclaimer](disclaimer.md)
+- [Attachments](attachments.md)
 
-### Overview
+## Overview
 
-This is an overview section.
+The DTVK system combines advanced sensors, intelligent control hardware, and open-source software to deliver a modular platform for autonomous mobility.
 
-### Purpose
+## Getting help
 
-This is the purpose section.
+If you need assistance, please contact support or check the FAQ.
+
+
+

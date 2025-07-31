@@ -6,10 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'DTVK'
-copyright = '2025, AA'
-author = 'AA'
-release = '1.0'
+# Project info
+project = 'DTVK 1.0 documentation'
+html_title = "DTVK documentation"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -31,8 +30,6 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'pydata_sphinx_theme'
-
-html_last_updated_fmt = "%Y-%m-%d"  # or use another format string 
 
 html_theme_options = {
     # Items displayed at the start (left) of the navbar — usually the logo
@@ -71,6 +68,12 @@ html_theme_options = {
         "icon": "material/toggle-switch",  # Icon for the toggle button
         "label": "Switch theme",           # Tooltip or button label
     },
+}
+
+html_last_updated_fmt = "%Y-%m-%d"  # or use another format string 
+
+html_sidebars = {
+    "**": ["sidebar-nav-bs.html", "sidebar-ethical-ads.html"]
 }
 
 
