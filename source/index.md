@@ -1,5 +1,16 @@
 # Introduction
 
+```{toctree}
+:maxdepth: 2
+:caption: Contents
+
+product-unboxing-guide
+hardware-and-management
+autonomous-driving-software
+safety-operation-and-maintenance
+disclaimer
+attachments
+
 Welcome to the official documentation for DTVK.
 
 ## Heading 2a
@@ -8,13 +19,3 @@ Welcome to the official documentation for DTVK.
 
 ## Heading 2c
 
-```{toctree}
-:maxdepth: 2
-:caption: Documentation
-
-product-unboxing-guide
-hardware-and-management
-autonomous-driving-software
-safety-operation-and-maintenance
-disclaimer
-attachments
