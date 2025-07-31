@@ -1,0 +1,61 @@
+# Getting started
+
+This section provides a comprehensive guide for customers on how to unbox and begin using the product upon delivery.
+
+![Remote controller](images/dtvk_doc_02.png)
+
+## Remote controller
+
+The industrial remote controller is a crucial component for operating the vehicle. Familiarize yourself with the functions of each switch before use.
+
+|    | Function               | Description |
+|----| -----------------------|-------------|
+| 1  | Power button           | Turns controller on and off |
+| 2  | Throttle/brake         | Adjusts speed and braking |
+| 3  | Gear selector          | Selects gear mode (D/N/R) |
+| 4  | Headlights             | Turns headlights on and off |
+| 5  | Handbrake              | Toggles parking brake |
+| 6  | Control mode           | Switches between remote control and autonomous mode |
+| 7  | Steering mode          | Selects steering mode |
+| 8  | Steering control       | Controls the vehicle's steering direction |
+| 9  | Motor control mode     | Selects motor control mode |
+| 10 | Speed limiter          | Toggles speed limiter |
+| 11 | Drive mode (2WD/4WD)   | Selects two-wheel and four-wheel drive modes |
+| 12 | Emergency stop         | Brings vehicle to a halt in event of emergency |
+| 13 | Display view           | Switches display page on LCD panel |
+| 14 | Remote controller lock | Locks controller to prevent unauthorized use |
+
+### LCD Panel
+The LCD panel on the remote controller displays both the remote controller's status and the vehicle's status. 
+
+==For details on fault codes displayed on the remote controller and suggested troubleshooting steps, please refer to the relevant section in the manual.==
+
+![Remote controller](images/dtvk_doc_03.png)
+
+|    | Indicator                 |
+|----| --------------------------|
+| 1  | Controller battery status |
+| 2  | Signal strength           |
+| 3  | Button feedback           |
+| 4  | Control mode              |
+| 5  | Steering mode             |
+| 6  | Steering range            |
+| 7  | Vehicle battery status    |
+| 8  | Speed mode                |
+| 9  | Control mode              |
+| 10 | Drive mode                |
+| 11 | Speed                     |
+| 12 | Throttle/braking range    |
+| 13 | Gear status               |
+
+### Safety tips for teleoperation
+Users must familiarize themselves with the remote controller before entering autonomous driving mode, especially the emergency stop function.
+
+- When turning the remote controller on and off, ensure that all function buttons are in the off state, for example, parking, neutral gear, remote control mode, and no throttle.
+- Verify that all buttons are functional before operating the vehicle.
+- When in remote control mode, do not push the throttle to its maximum level in one go to avoid potential accidents. Throttle control should be gradually applied.
+- When operating in an open area, ensure that the remote controller’s working range does not exceed 100 meters.
+- After stopping the vehicle, ensure that the vehicle is in neutral gear and the handbrake is engaged. Avoid parking on slopes.
+- Users must must carefully read the instructions before use. People unfamiliar with the controls should not operate the vehicle, as this may result in accidents.
+
+Both the remote controller system and the vehicle's VCU layer assign absolute priority to the remote control receiver. ==And the basic rule is that under any condition of the vehicle's chassis (ensure the remote controller is charged before each operation), as long as the remote controller is powered on and in remote takeover mode, the vehicle chassis will enter manual takeover mode.== This ensures safety during development and testing.
