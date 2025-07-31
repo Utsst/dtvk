@@ -90,3 +90,5 @@ html_show_sourcelink = False # Remove source
 
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
+
+html_extra_path = ['_static/robots.txt']
