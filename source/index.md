@@ -1,5 +1,3 @@
-# Introduction
-
 ```{toctree}
 :maxdepth: 2
 :caption: Contents
@@ -11,11 +9,15 @@ safety-operation-and-maintenance
 disclaimer
 attachments
 
+# Introduction
+
 Welcome to the official documentation for DTVK.
 
-## Heading 2a
+## Overview
 
-## Heading 2b
+This is an overview section.
 
-## Heading 2c
+## Purpose
+
+This is the purpose section.
 
