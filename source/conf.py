@@ -37,7 +37,7 @@ html_theme_options = {
     "navbar_start": ["navbar-logo"],
 
     # Items centered in the navbar — typically the main navigation links
-    "navbar_center": ["navbar-nav"],
+    # "navbar_center": ["navbar-nav"],
 
     # Items displayed at the end (right) of the navbar — here: theme toggle, icon links, and search button
     # "navbar_end": ["theme-switcher", "navbar-icon-links", "search-button"],
