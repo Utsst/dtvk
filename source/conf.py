@@ -33,22 +33,44 @@ exclude_patterns = []
 html_theme = 'pydata_sphinx_theme'
 
 html_theme_options = {
+    # Items displayed at the start (left) of the navbar — usually the logo
     "navbar_start": ["navbar-logo"],
+
+    # Items centered in the navbar — typically the main navigation links
     "navbar_center": ["navbar-nav"],
-    "navbar_end": ["theme-switcher", "navbar-icon-links"],
+
+    # Items displayed at the end (right) of the navbar — here: theme toggle, icon links, and search button
+    "navbar_end": ["theme-switcher", "navbar-icon-links", "search-button"],
+
+    # Placeholder text shown in the floating search dialog
+    "search_bar_text": "Search the docs ...",
+
+    # Content shown at the start (left) of the footer — here, custom footer content
     "footer_start": ["footer"],
+
+    # Content shown at the end (right) of the footer — typically the copyright line
     "footer_end": ["copyright"],
+
+    # Enables previous/next navigation links at the bottom of each page
     "show_prev_next": True,
 
-    "use_edit_page_button": False,
+    # Allows keyboard navigation (← → arrows) between pages
     "navigation_with_keys": True,
-#   "light_logo": "logo-light.png",
-#  "dark_logo": "logo-dark.png",
+
+    # Hides the "Edit this page" button that would link to your GitHub source
+    "use_edit_page_button": False,
+
+    # (Optional) Uncomment below to use light/dark mode logos — must match filenames in _static/
+    # "light_logo": "logo-light.png",
+    # "dark_logo": "logo-dark.png",
+
+    # Controls the appearance and label of the theme toggle (light/dark/system)
     "theme_toggle": {
-        "icon": "material/toggle-switch",
-        "label": "Switch theme",
+        "icon": "material/toggle-switch",  # Icon for the toggle button
+        "label": "Switch theme",           # Tooltip or button label
     },
 }
+
 
 # html_logo = "_static/logo-light.png"
 # html_favicon = "_static/favicon.ico"
@@ -59,6 +81,7 @@ html_context = {
 
 html_show_sphinx = False  # Remove "Built with Sphinx"
 html_show_copyright = False  # Remove copyright
+html_show_sourcelink = False # Remove source
 
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
