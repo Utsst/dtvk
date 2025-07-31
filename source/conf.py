@@ -71,18 +71,9 @@ html_theme_options = {
     },
 }
 
-html_sidebars = {
-    "**": [
-        "sidebar-nav-bs.html",       # The main navigation tree
-        "custom-last-updated.html",  # Our custom template for the last updated date
-        # You can add other pydata_sphinx_theme sidebar components here if you want them,
-        # e.g., "sidebar-search-bs.html" if you want the persistent search bar,
-        # "sidebar-ethical-ads.html", etc.
-    ]
-}
-
 html_last_updated = True
 html_last_updated_fmt = "%Y-%m-%d"
+today_fmt = "%Y-%m-%d"
 
 # html_logo = "_static/logo-light.png"
 # html_favicon = "_static/favicon.ico"
@@ -97,3 +88,4 @@ html_show_sourcelink = False # Remove source
 
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
+
