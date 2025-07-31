@@ -16,7 +16,7 @@ html_title = "DTVK documentation"
 extensions = [
     "myst_parser",
     "sphinx.ext.githubpages",
-    "sphinx.ext.viewcode",
+    "sphinx_last_updated_by_git",
 ]
 
 source_suffix = {
