@@ -93,5 +93,24 @@ html_css_files = ["custom.css"]
 
 myst_enable_extensions = [
     "colon_fence",
-    "jinja",  # ✅ This enables {{ last_updated }} to be rendered in .md
+    "html_admonition",
+    "html_image",
+    "replacements",
+    "substitution",
+    "deflist",
+    "linkify",
+    "tasklist",
+    "attrs_inline",
+    "attrs_block",
+    "fieldlist",
+    "strikethrough",
+    "smartquotes",
+    "restructuredtext",
+    "dollarmath",
+    "amsmath",
+    "jinja",  # ✅ THIS ONE IS NEEDED!
 ]
+
+myst_substitutions = {
+    "last_updated": "{{ last_updated }}"
+}
