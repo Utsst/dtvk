@@ -90,27 +90,3 @@ html_show_sourcelink = False # Remove source
 
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
-
-myst_enable_extensions = [
-    "colon_fence",
-    "html_admonition",
-    "html_image",
-    "replacements",
-    "substitution",
-    "deflist",
-    "linkify",
-    "tasklist",
-    "attrs_inline",
-    "attrs_block",
-    "fieldlist",
-    "strikethrough",
-    "smartquotes",
-    "restructuredtext",
-    "dollarmath",
-    "amsmath",
-    "jinja",  # ✅ THIS ONE IS NEEDED!
-]
-
-myst_substitutions = {
-    "last_updated": "{{ last_updated }}"
-}

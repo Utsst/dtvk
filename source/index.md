@@ -21,8 +21,4 @@ The DTVK system combines advanced sensors, intelligent control hardware, and ope
 
 If you need assistance, please contact support or check the FAQ.
 
-```md
-```{note}
-📅 Last updated: {last_updated}
-
 
