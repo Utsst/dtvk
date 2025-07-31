@@ -39,7 +39,8 @@ html_theme_options = {
     "navbar_center": ["navbar-nav"],
 
     # Items displayed at the end (right) of the navbar — here: theme toggle, icon links, and search button
-    "navbar_end": ["theme-switcher", "navbar-icon-links", "search-button"],
+    # "navbar_end": ["theme-switcher", "navbar-icon-links", "search-button"],
+    "navbar_end": ["theme-switcher", "search-button"],
 
     # Placeholder text shown in the floating search dialog
     "search_bar_text": "Search the docs ...",
@@ -71,11 +72,6 @@ html_theme_options = {
 }
 
 html_last_updated_fmt = "%Y-%m-%d"  # or use another format string 
-
-html_sidebars = {
-    "**": ["sidebar-nav-bs.html", "sidebar-ethical-ads.html"]
-}
-
 
 # html_logo = "_static/logo-light.png"
 # html_favicon = "_static/favicon.ico"
