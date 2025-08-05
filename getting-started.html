@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="article:modified_time" content="2025-08-05T07:07:20+00:00" />
+    <title>Getting started &#8212; DTVK documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=04dbcc03" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=8a448e45"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'getting-started';</script>
+    <link rel="icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Hardware and management" href="hardware-and-management.html" />
+    <link rel="prev" title="Overview" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+    <meta name="docbuild:last-update" content="2025-08-05"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the documentation ..."
+         aria-label="Search the documentation ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">DTVK documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><div>  </div></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item"><div>  </div></div>
+          
+        
+      </div>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><!-- <h3><a href="index.html">Home</a></h3> -->
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware-and-management.html">Hardware and management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="autonomous-driving-software.html">Autonomous driving software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="safety-operation-and-maintenance.html">Safety operation and maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disclaimer.html">Disclaimer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="attachments.html">Attachments</a></li>
+</ul>
+</div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Getting started</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
+<p>This section provides a comprehensive guide for customers on how to unbox and begin using the product upon delivery.</p>
+<section id="first-step">
+<h2>First step<a class="headerlink" href="#first-step" title="Link to this heading">#</a></h2>
+<p>Please open the package and inspect the vehicle and accompanying items immediately upon delivery.</p>
+<section id="hardware-checklist">
+<h3>Hardware checklist<a class="headerlink" href="#hardware-checklist" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Item</p></th>
+<th class="head"><p>Quantity</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p>Item</p></th>
+<th class="head"><p>Quantity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>☐</p></td>
+<td><p>Main LiDAR</p></td>
+<td><p>1</p></td>
+<td><p>☐</p></td>
+<td><p>Brake pedal</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>☐</p></td>
+<td><p>Blind-spot LiDAR</p></td>
+<td><p>2</p></td>
+<td><p>☐</p></td>
+<td><p>Steering wheel</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>☐</p></td>
+<td><p>TIER IV C2 Camera</p></td>
+<td><p>2</p></td>
+<td><p>☐</p></td>
+<td><p>Driver panel</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>☐</p></td>
+<td><p>Ultrasonic radar</p></td>
+<td><p>8</p></td>
+<td><p>☐</p></td>
+<td><p>Seats</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>☐</p></td>
+<td><p><strong>Long range radar</strong></p></td>
+<td><p>1</p></td>
+<td><p>☐</p></td>
+<td><p>Canopy</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>☐</p></td>
+<td><p>GNSS antenna</p></td>
+<td><p>2</p></td>
+<td><p>☐</p></td>
+<td><p>Bumper</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>☐</p></td>
+<td><p>Integrated navigation system</p></td>
+<td><p>1</p></td>
+<td><p>☐</p></td>
+<td><p>Headlight</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>☐</p></td>
+<td><p>Computing unit</p></td>
+<td><p>1</p></td>
+<td><p>☐</p></td>
+<td><p>Front Turn Signal Light</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>☐</p></td>
+<td><p><strong>Sub computing unit</strong></p></td>
+<td><p><strong>1</strong></p></td>
+<td><p>☐</p></td>
+<td><p>Rear Turn Signal Light</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>☐</p></td>
+<td><p>Chassis</p></td>
+<td><p>1</p></td>
+<td><p>☐</p></td>
+<td><p>Brake Light</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>☐</p></td>
+<td><p>Side mirror</p></td>
+<td><p>2</p></td>
+<td><p>☐</p></td>
+<td><p>15.6-inch Monitor</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>☐</p></td>
+<td><p>Accelerator pedal</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="accessories-checklist">
+<h3>Accessories checklist<a class="headerlink" href="#accessories-checklist" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Item</p></th>
+<th class="head"><p>Quantity</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p>Item</p></th>
+<th class="head"><p>Quantity</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>☐</p></td>
+<td><p>Chassis charger</p></td>
+<td><p>1</p></td>
+<td><p>☐</p></td>
+<td><p>Certificate of conformity</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>☐</p></td>
+<td><p>Remote controller</p></td>
+<td><p>1</p></td>
+<td><p>☐</p></td>
+<td><p>Warranty document</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>☐</p></td>
+<td><p>User manual</p></td>
+<td><p>1</p></td>
+<td><p>☐</p></td>
+<td><p>Delivery packing list</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>☐</p></td>
+<td><p>Accessory set</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>Check for any damage during transportation of the kit.</p></li>
+<li><p>Check items against the packing list for missing, misdelivered, or mismatched accessories/documents.</p></li>
+</ul>
+</div>
+<br />
+<p><img alt="Remote controller" src="_images/dtvk_doc_02.png" /></p>
+</section>
+</section>
+<section id="remote-controller">
+<h2>Remote controller<a class="headerlink" href="#remote-controller" title="Link to this heading">#</a></h2>
+<p>The industrial remote controller is a crucial component for operating the vehicle. Familiarize yourself with the functions of each switch before use.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>Controller functions</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Power button</p></td>
+<td><p>Turns controller on and off</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Throttle/brake</p></td>
+<td><p>Adjusts speed and braking</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Gear selector</p></td>
+<td><p>Selects gear mode (D/N/R)</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Headlights</p></td>
+<td><p>Turns headlights on and off</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Handbrake</p></td>
+<td><p>Toggles parking brake</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Control mode</p></td>
+<td><p>Switches between remote control and autonomous mode</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Steering mode</p></td>
+<td><p>Selects steering mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Steering control</p></td>
+<td><p>Controls the vehicle’s steering direction</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Motor control mode</p></td>
+<td><p>Selects motor control mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Speed limiter</p></td>
+<td><p>Toggles speed limiter</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Drive mode (2WD/4WD)</p></td>
+<td><p>Selects two-wheel and four-wheel drive modes</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Emergency stop</p></td>
+<td><p>Brings vehicle to a halt in event of emergency</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>Display view</p></td>
+<td><p>Switches display page on LCD panel</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>Remote controller lock</p></td>
+<td><p>Locks controller to prevent unauthorized use</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="lcd-panel">
+<h3>LCD Panel<a class="headerlink" href="#lcd-panel" title="Link to this heading">#</a></h3>
+<p>The LCD panel on the remote controller displays both the remote controller’s status and the vehicle’s status.</p>
+<p>
+  <span class="highlight-text">
+    For details on fault codes displayed on the remote controller and suggested troubleshooting steps, please refer to the relevant section in the manual.
+  </span>
+</p>
+<p><img alt="Remote controller display" src="_images/dtvk_doc_03.png" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>Display indicators</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Controller battery status</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Signal strength</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Button feedback</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Control mode</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Steering mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Steering range</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Vehicle battery status</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Speed mode</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Control mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Drive mode</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Speed</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Throttle/braking range</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>Gear status</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="safety-tips-for-teleoperation">
+<h3>Safety tips for teleoperation<a class="headerlink" href="#safety-tips-for-teleoperation" title="Link to this heading">#</a></h3>
+<p>Users must familiarize themselves with the remote controller before entering autonomous driving mode, especially the emergency stop function.</p>
+<ul class="simple">
+<li><p>When turning the remote controller on and off, ensure that all function buttons are in the off state, for example, parking, neutral gear, remote control mode, and no throttle.</p></li>
+<li><p>Verify that all buttons are functional before operating the vehicle.</p></li>
+<li><p>When in remote control mode, do not push the throttle to its maximum level in one go to avoid potential accidents. Throttle control should be gradually applied.</p></li>
+<li><p>When operating in an open area, ensure that the remote controller’s working range does not exceed 100 meters.</p></li>
+<li><p>After stopping the vehicle, ensure that the vehicle is in neutral gear and the handbrake is engaged. Avoid parking on slopes.</p></li>
+<li><p>Users must must carefully read the instructions before use. People unfamiliar with the controls should not operate the vehicle, as this may result in accidents.</p></li>
+</ul>
+<p>Both the remote controller system and the vehicle’s VCU layer assign absolute priority to the remote control receiver. <span class="highlight-text">And the basic rule is that under any condition of the vehicle’s chassis (ensure the remote controller is charged before each operation), as long as the remote controller is powered on and in remote takeover mode, the vehicle chassis will enter manual takeover mode.</span> This ensures safety during development and testing.</p>
+</section>
+</section>
+<section id="vehicle-startup-procedure">
+<h2>Vehicle startup procedure<a class="headerlink" href="#vehicle-startup-procedure" title="Link to this heading">#</a></h2>
+<section id="power-on-the-chassis">
+<h3>1. Power on the chassis<a class="headerlink" href="#power-on-the-chassis" title="Link to this heading">#</a></h3>
+<p>Please refer to the button descriptions in the diagram below. Press the power switch on the control panel to power on the vehicle.</p>
+<p><img alt="Cockpit" src="_images/dtvk_doc_05.png" /></p>
+<br />
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>#</p></th>
+<th class="head"><p>Cockpit controls</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Steering wheel</p></td>
+<td><p>Only operational in manual driving mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Brake pedal</p></td>
+<td><p>Only operational in manual driving mode</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Throttle pedal</p></td>
+<td><p>Only operational in manual driving mode</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>Gear switch knob</p></td>
+<td><p>Only operational in manual driving mode</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Emergency stop button</p></td>
+<td><p>Toggles emergency stop on and off</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Park button</p></td>
+<td><p>Only operational in manual driving mode</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Manual mode button</p></td>
+<td><p>See <strong>Manual mode</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Power button</p></td>
+<td><p>Vehicle start/shut down</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><span class="highlight-text"> If the emergency stop button is activated, the vehicle chassis will not respond to any control commands, regardless of the vehicle being in teleoperation mode, manual mode, or autonomous driving mode. </span></p>
+</div>
+</section>
+<section id="handbrake-confirmation">
+<h3>2. Handbrake Confirmation<a class="headerlink" href="#handbrake-confirmation" title="Link to this heading">#</a></h3>
+<p>Ensure the handbrake lever on the industry remote control is in the “Handbrake On” (engaged) position.</p>
+<p><img alt="Handbrake lever" src="_images/dtvk_doc_06.png" /></p>
+</section>
+<section id="turning-on-the-remote-controller">
+<h3>3. Turning on the remote controller<a class="headerlink" href="#turning-on-the-remote-controller" title="Link to this heading">#</a></h3>
+<p>Rotate the power switch knob on the remote controller to the “On” position.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>If the remote controller emits a beeping sound, it indicates that the communication betwen the controller and the chassis has not been established. Please wait until the chassis power system is fully activated and the beeping stops before proceeding.</p>
+</div>
+<br />
+<p><img alt="Controller power up" src="_images/dtvk_doc_06.png" /></p>
+</section>
+<section id="gear-selection">
+<h3>4. Gear selection<a class="headerlink" href="#gear-selection" title="Link to this heading">#</a></h3>
+<p>Rotate the gear switch knob on the remote controller and select reverse gear.</p>
+<p><img alt="Reverse gear selected" src="_images/dtvk_doc_06.png" /></p>
+</section>
+<section id="braking">
+<h3>5. Braking<a class="headerlink" href="#braking" title="Link to this heading">#</a></h3>
+<p>Push the left lever all the way down to engage full braking force (100%).</p>
+<p><img alt="Throttle/brake lever" src="_images/dtvk_doc_06.png" /></p>
+</section>
+<section id="releasing-the-handbrake">
+<h3>6. Releasing the handbrake<a class="headerlink" href="#releasing-the-handbrake" title="Link to this heading">#</a></h3>
+<p>While holding the left lever fully down in the braking position, switch the handbrake control to <strong>Handbrake Off</strong>.
+Once you hear the sound of the handbrake releasing, slowly release the left lever, allowing the vehicle to roll off the trailer.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Monitoring the vehicle’s rolling speed closely. If it becomes too fast or there is any risk of collision, push the left lever down to brake immediately.</p>
+</div>
+</section>
+<section id="parking">
+<h3>7. Parking<a class="headerlink" href="#parking" title="Link to this heading">#</a></h3>
+<p>Once the vehicle has rolled to a full stop on the ground, switch the handbrake control back to <strong>Handbrake On</strong>.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Overview</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hardware-and-management.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hardware and management</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-step">First step</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-checklist">Hardware checklist</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accessories-checklist">Accessories checklist</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-controller">Remote controller</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lcd-panel">LCD Panel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-tips-for-teleoperation">Safety tips for teleoperation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicle-startup-procedure">Vehicle startup procedure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-on-the-chassis">1. Power on the chassis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handbrake-confirmation">2. Handbrake Confirmation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turning-on-the-remote-controller">3. Turning on the remote controller</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gear-selection">4. Gear selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#braking">5. Braking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#releasing-the-handbrake">6. Releasing the handbrake</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parking">7. Parking</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><div class="custom-footer" style="display: flex; align-items: center;">
+  
+  <div class="footer label">© xxx | Last updated:&nbsp;</div>
+  <!-- -->
+  <div class="date">2025-08-05</div>
+
+</div></div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>
