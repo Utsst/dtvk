@@ -13,9 +13,12 @@ html_title = "DTVK documentation"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+master_doc = "index"  # Usually default, but good to confirm
+
 extensions = [
     "myst_parser",
     "sphinx.ext.githubpages",
+    "sphinx_design", # Add this line
     "sphinx_last_updated_by_git",  # ✅ must be exactly this name
 ]
 
@@ -33,10 +36,20 @@ exclude_patterns = []
 html_theme = 'pydata_sphinx_theme'
 
 html_theme_options = {
+    
+    # Consider RHS navigation for content entries/sub-entries
+
     # Items displayed in the top navigation bar
     "navbar_start": ["navbar-logo"],
     "navbar_center": ["my_custom_navbar_content"],
     "navbar_end": [],
+
+    # Control how many navigation levels are shown by default
+    "show_nav_level": 1,
+    "navigation_depth": 1,
+    "collapse_navigation": False,  # <== helps keep tree expanded
+
+    #"secondary_sidebar_items": ["page-toc", "sidebar-nav-bs"],
 
     # Placeholder text shown in the floating search dialog
     "search_bar_text": "Search the documentation ...",
@@ -67,13 +80,11 @@ html_theme_options = {
     # },
 }
 
+# html_logo = "_static/logo-light.png"
 html_favicon = "_static/favicon.ico"
 
 html_last_updated_fmt = "%Y-%m-%d"
 html_last_updated = True
-
-# html_logo = "_static/logo-light.png"
-# html_favicon = "_static/favicon.ico"
 
 import datetime
 
@@ -90,7 +101,12 @@ html_css_files = ["custom.css"]
 
 html_extra_path = ['_static/robots.txt']
 
-# To remove the left sidebar (Primary Sidebar) from all pages
+# Adds custom globaltoc.html in left sidebar
 html_sidebars = {
-    "**": [], # An empty list means no sidebar items for all pages
+    'index': [],  # ← no sidebar on the root page
+    '**': ['globaltoc.html'],  # ← sidebar everywhere else
 }
+    
+myst_enable_extensions = [
+    "colon_fence",  # Required for ::: directives
+]

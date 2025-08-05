@@ -1,43 +1,160 @@
-/* custom.css */
+/* _static/custom.css */
 
 :root {
-    /* Base Colors */
-  --pst-color-primary: #3498db;
-  --pst-color-secondary: #2ecc71;
+  /*
+   * You can override the individual color palette shades if you want,
+   * but it's more effective to target the semantic colors directly.
+   */
+  /* Example: Override specific teal shades to a blue */
+  /*
+  --pst-teal-500: #007bff;
+  --pst-teal-400: #0087ed;
+  --pst-teal-600: #0069cc;
+  */
 
-  /* Text Colors */
-  --pst-color-text-primary: #343a40; /* Darker text for readability */
-  --pst-color-text-secondary: #6c757d; /* Lighter gray for less important text */
+  /* Example: Override specific violet shades to a green */
+  /*
+  --pst-violet-500: #28a745;
+  --pst-violet-400: #2dba4a;
+  --pst-violet-600: #208838;
+  */
 
-  /* Background Colors */
-  --pst-color-background-primary: #ffffff; /* White background for main content */
-  --pst-color-background-secondary: #f8f9fa; /* Light gray for sidebars/blocks */
 
-  /* Link Colors */
-  --pst-color-link: #007bff; /* Standard link color */
-  --pst-color-link-hover: #0056b3; /* Darker blue on hover for links */
+  /*
+   * --- Recommended Approach: Override Semantic Colors ---
+   *
+   * These are the variables that the theme *actually uses* for its components
+   * (links, buttons, backgrounds, etc.). By changing these, you control the
+   * overall look and feel.
+   *
+   * Use the specific values from TIER IV's brand guidelines.
+   * I'll use some common blue/green hex codes as placeholders.
+   */
 
-  /* Sidebar Navigation Colors (Left Sidebar) */
-  --pst-color-sidebar-background: var(--pst-color-background-secondary); /* Use secondary background */
-  --pst-color-sidebar-link: var(--pst-color-text-primary); /* Sidebar link text */
-  --pst-color-sidebar-link-hover: var(--pst-color-link-hover); /* Hover color for sidebar links */
-  --pst-color-sidebar-link-active: var(--pst-color-primary); /* Active link in sidebar */
-  --pst-color-sidebar-border: #dee2e6; /* Border color within sidebar */
+  /* Primary Color (replaces 'teal' in the theme's default usage) */
+  --pst-color-primary: #101224; /* A standard blue */
+  --pst-color-primary-bg: #e0f0ff; /* Lighter blue for backgrounds */
 
-  /* Table Colors */
-  --pst-color-table-border: #e9ecef; /* General table border color */
-  --pst-color-table-header-background: #e9ecef; /* Header background */
-  --pst-color-table-header-text: var(--pst-color-text-primary); /* Header text color */
-  --pst-color-table-header-border-bottom: var(--pst-color-primary); /* Separating rule below header */
+  /* Secondary Color (replaces 'violet' in the theme's default usage) */
+  --pst-color-secondary: #1d3e48; /* A standard green */
+  --pst-color-secondary-bg: #e9fceb; /* Lighter green for backgrounds */
 
-  /* Previous/Next Navigation Links (Footer Nav) */
-  --pst-color-prev-next-link: var(--pst-color-link);
-  --pst-color-prev-next-link-hover: var(--pst-color-link-hover);
-  --pst-color-prev-next-background-hover: var(--pst-color-background-secondary); /* Background on hover */
+  /* Accent Color (replaces 'pink' in the theme's default usage) */
+  --pst-color-accent: #ffc107; /* A yellow/orange for accent if needed */
+  --pst-color-accent-bg: #fff3cd;
 
-  /* Admonition (Note, Tip, Warning) Colors - examples */
-  --pst-color-admonition-note: #cce5ff;
-  --pst-color-admonition-tip: #d4edda;
-  --pst-color-admonition-warning: #fff3cd;
-  --pst-color-admonition-error: #f8d7da;
+  /* Text Colors - adjust these if the new primary/secondary colors affect readability */
+  --pst-color-text-base: #212529; /* Darker grey for primary text */
+  --pst-color-text-muted: #6c757d; /* Muted grey for secondary text */
+
+  /* Link Colors - often derive from primary/secondary, but you can override specifically */
+  --pst-color-link: var(--pst-color-primary); /* Default link color is your new primary */
+  --pst-color-link-hover: var(--pst-color-secondary); /* Link hover is your new secondary */
+
+  /* Sidebar Colors - ensure they fit your new scheme */
+  --pst-color-sidebar-background: #f8f9fa; /* Light grey */
+  --pst-color-sidebar-link: var(--pst-color-text-primary);
+  --pst-color-sidebar-link-hover: var(--pst-color-link-hover);
+  --pst-color-sidebar-link-active: var(--pst-color-primary); /* Active sidebar link uses your new primary */
+
+  /* Table Colors - adjust the rule separating header and content */
+  --pst-color-table-header-border-bottom: var(--pst-color-primary); /* Use your new primary color */
+  --pst-color-table-inner-border: #dee2e6; /* Light border for inner table lines */
+  --pst-color-table-row-hover-bg: #e2f0ff; /* Light blue/green for row hover */
+
+  /* Previous/Next Page Navigation Link Hover Color */
+  --pst-color-prev-next-link-hover: var(--pst-color-link-hover); /* Matches general link hover */
+  --pst-color-prev-next-background-hover: var(--pst-color-background-secondary); /* Or a specific light hover background */
+
+  /* Other important colors that might be affected: */
+  --pst-color-border: #dee2e6; /* General border color */
+  --pst-color-shadow: rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+/* --- Specific overrides for light/dark mode --- */
+/* If you need different values for light and dark modes, you'd do: */
+
+html[data-theme="light"] {
+  --pst-color-primary: #101224; /* Blue for light mode */
+  --pst-color-secondary: #003766; /* Green for light mode */
+  /* ... more light-specific overrides */
+}
+
+html[data-theme="dark"] {
+  --pst-color-primary: #6daffc; /* Lighter blue for dark mode visibility */
+  --pst-color-primary-bg: #003766;
+  --pst-color-secondary: #5cb85c; /* Lighter green for dark mode visibility */
+  --pst-color-secondary-bg: #11421e;
+
+  /* Adjust text and background colors for dark mode to ensure contrast */
+  --pst-color-text-base: #f8f9fa; /* Light text on dark background */
+  --pst-color-text-muted: #adb5bd;
+
+  --pst-color-background-primary: #1a1a1a; /* Dark background */
+  --pst-color-background-secondary: #2d2d2d; /* Slightly lighter dark for sidebars */
+
+  --pst-color-link: var(--pst-color-primary);
+  --pst-color-link-hover: var(--pst-color-secondary);
+
+  /* ... more dark-specific overrides */
+}
+
+.highlight-text {
+  background-color: yellow; /* Your desired highlight color */
+  /*
+   * Optional: Add a little padding around the text if you want it to look
+   * like a traditional highlight marker (like a highlighter pen).
+   * Be careful with padding on inline elements, as it can affect line height.
+   */
+  padding: 0.1em 0.3em; /* Small padding top/bottom, more left/right */
+  border-radius: 3px; /* Slightly rounded corners for the highlight */
+  /*
+   * Optional: If you want to change text color for better contrast
+   * color: black;
+   */
+}
+
+/* Ensure the paragraph itself doesn't have an unintended background if you previously added one */
+p {
+  background-color: transparent; /* or inherit; */
+}
+
+h3 {
+    font-size: 1.2em; /* Adjust this value as desired */
+}
+
+
+
+/* Style the primary sidebar TOC to match the secondary sidebar */
+
+.bd-sidebar-primary ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.bd-sidebar-primary li.toctree-l1 {
+  margin: 0.25rem 0;
+}
+
+.bd-sidebar-primary li.toctree-l1 > a {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-left: 3px solid transparent;
+  text-decoration: none;
+  color: var(--pst-color-text-base);
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.bd-sidebar-primary li.toctree-l1 > a:hover {
+  color: var(--pst-color-link-hover);
+  background-color: var(--pst-color-background-hover);
+  border-left-color: var(--pst-color-link-hover);
+}
+
+.bd-sidebar-primary li.toctree-l1.current > a {
+  font-weight: 600;
+  border-left-color: var(--pst-color-link-hover);
 }

@@ -6,12 +6,16 @@ This manual aims to help users quickly get started with the DTV Kit. It provides
 
 ## Contents
 
-- [Getting started](getting-started.md)
-- [Hardware and Management](hardware-and-management.md)
-- [Autonomous Driving Software](autonomous-driving-software.md)
-- [Safety Operation and Maintenance](safety-operation-and-maintenance.md)
-- [Disclaimer](disclaimer.md)
-- [Attachments](attachments.md)
+```{toctree}
+:maxdepth: 1
+
+getting-started
+hardware-and-management
+autonomous-driving-software
+safety-operation-and-maintenance
+disclaimer
+attachments
+```
 
 ## Features
 
@@ -28,14 +32,3 @@ The DTV is built on a robust chassis. Its high-strength metal truss enhances dur
 
 ### Flexibile driving modes
 The DTV offers four driving modes to support a range of testing and development needs: autonomous driving using Autoware; manual driving via a steering wheel and pedals; teleoperation using an industrial remote control: and remote operation.
-
-```{toctree}
-:hidden:
-:maxdepth: 1
-
-getting-started.md
-hardware-and-management.md
-autonomous-driving-software.md
-safety-operation-and-maintenance.md
-disclaimer.md
-attachments.md
